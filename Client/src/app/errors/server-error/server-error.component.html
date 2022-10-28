@@ -1,0 +1,10 @@
+<h1>Internal server error! refershing the page which make error disappear</h1>
+
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error:{{error.message}}</h5>
+    <p class="font-weight-bold">Note: Here is detail of error</p>
+
+    <p class="font-weight-bold">Following is stack trace of error</p>
+  <code class="mt-5" style="background-color: whitesmoke ;">{{error.details}}</code>
+    
+</ng-container>

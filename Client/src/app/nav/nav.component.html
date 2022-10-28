@@ -16,12 +16,16 @@
                   <a class="nav-link" routerLink="/lists" routerLinkActive="Active">list</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " routerLink="messages" routerLinkActive="Active" >Messages</a>
+                  <a class="nav-link " routerLink="/messages" routerLinkActive="Active" >Messages</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " (click)="logout()">logout</a>
                 </li>
               </ng-container>
+
+              <li class="nav-item">
+                <a class="nav-link " routerLink="/error" routerLinkActive="Active" >Errors</a>
+              </li>
             
           </ul>
            <div class="dropdown" *ngIf="(accountService.currentuser$ | async) as User" dropdown>
