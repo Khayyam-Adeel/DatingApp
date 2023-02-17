@@ -18,7 +18,7 @@ const routes: Routes = [
     runGuardsAndResolvers:'always',
     children:[
       {path:'members', component:MembersListComponent},
-      {path:'member/:id', component:MembersDetailsComponent},
+      {path:'member/:username', component:MembersDetailsComponent},
       {path:'messages', component:MessagesComponent},
       {path:'lists', component:ListComponent},
       
