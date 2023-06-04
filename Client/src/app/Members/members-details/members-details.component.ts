@@ -12,7 +12,7 @@ import { MembersService } from 'src/app/_Services/members.service';
 export class MembersDetailsComponent implements OnInit {
   member:Member | undefined
   galleryOptions : NgxGalleryOptions[] = [];
-  galeryImages : NgxGalleryImage[] = [];
+  galleryImages : NgxGalleryImage[] = [];
   constructor( private memberservice:MembersService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class MembersDetailsComponent implements OnInit {
     
   }
   getImages(){
-    if(!this.member) return [];
+    if(!this.member) return ['https://randomuser.me/api/portraits/women/54.jpg'];
     const imageurls=[];
     for (const photo of this.member.photos){
       imageurls.push({
@@ -51,7 +51,7 @@ export class MembersDetailsComponent implements OnInit {
     this.memberservice.getMember(username).subscribe({
       next : member => {
         this.member = member;
-        this.galeryImages=this.getImages();
+        this.galleryImages=this.getImages();
       }
     })
   }
