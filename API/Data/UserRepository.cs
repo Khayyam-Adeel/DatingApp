@@ -33,7 +33,10 @@ namespace API.Data
         {
             return await _context.User.Include(p=>p.Photos).SingleOrDefaultAsync(X => X.UserName==userName);
         }
-
+        public async Task<AppUser> getUserByUserNameAsync(string userName)
+        {
+            return await _context.User.SingleOrDefaultAsync(X => X.UserName == userName);
+        }
         public async Task<bool> saveAllAsync()
         {
             return await _context.SaveChangesAsync()>0;
