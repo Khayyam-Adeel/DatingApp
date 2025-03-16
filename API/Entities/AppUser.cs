@@ -8,6 +8,13 @@ namespace API.Entities
 {
     public class AppUser
     {
+        public AppUser()
+        {
+            Photos = new List<Photo>();
+            Created = DateTime.UtcNow;
+            LastActive = DateTime.UtcNow;
+        }
+
         public int Id { get; set; }
 
         public string UserName { get; set; }

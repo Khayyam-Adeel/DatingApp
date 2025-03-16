@@ -5,9 +5,9 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
-import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import { MembersDetailsComponent } from './members/members-details/members-details.component';
-import { MembersListComponent } from './members/members-list/members-list.component';
+import { MemberEditComponent } from './Members/member-edit/member-edit.component';
+import { MembersDetailsComponent } from './Members/members-details/members-details.component';
+import { MembersListComponent } from './Members/members-list/members-list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guard/auth.guard';
 
